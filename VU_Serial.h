@@ -2,7 +2,6 @@ double veri_ayir(char aranan,char buffer[],int buffer_size)
 {
  char gecici_buffer[10]="";
 int gecici_buffer_deger=0;
-int aranan_durum;
 for(byte i=0; i<buffer_size; i++)
 {
  
@@ -12,8 +11,8 @@ for(byte i=0; i<buffer_size; i++)
      i++;
      while(i<buffer_size && gecici_buffer_deger<10)
      {
-  //    if(buffer[i]==0 || buffer[i]==' ')
-   //   break;
+     if(buffer[i]==0 || buffer[i]==' ')
+      break;
      gecici_buffer[gecici_buffer_deger]=buffer[i];
      i++;
      gecici_buffer_deger++;
@@ -21,11 +20,7 @@ for(byte i=0; i<buffer_size; i++)
      return strtod(gecici_buffer,NULL);
    
      }
-   
-    
+  }
 }
-
-}
-return 0;
-}
+return 0;}
 
